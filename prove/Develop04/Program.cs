@@ -1,56 +1,62 @@
 using System;
+using System.Diagnostics;
 
 class Program
 {
     static void Main(string[] args)
     {
-        
+        Console.Clear();
+        Console.Write("*** Welcome to the Mindfulness Program ***");
 
-        Console.WriteLine("Menu Options:");
+        Choices choice = new Choices();
+        int seconds;
 
-        string choice = "";
-
-        while (choice != "4")
+        int action = 0;
+        while (action != 4)
         {
-            DisplayMenu();
-            Console.Write("Select a choice from the menu: ");
-            choice = Console.ReadLine();
-
-            if (choice == "1")
+            action = choice.UserChoice();
+            switch (action)
             {
-                // breathing activity
-                Console.Write("Welcome to the Breathing Activity.");
-            }
-            else if (choice == "2")
-            {
-                // reflecting activity
-                Console.Write("Welcome to the Reflecting Activity.");
-
-            }
-            else if (choice == "3")
-            {
-                // listing activity
-                Console.Write("Welcome to the Listing Activity.");
-
-
-            }
-
-            else if (choice == "4")
-            {
-                // Quit program
-                Console.Write("Ending the program, goodbye.");
+                case 1:
+                    Console.Clear();
+                    Breathing breathing = new Breathing("Breathing", 0);
+                    breathing.GetActivityName();
+                    breathing.GetActivityDescription();
+                    seconds = breathing.GetActivityTime();
+                    breathing.GetReady();
+                    breathing.BreathingActivity(seconds);
+                    breathing.GetDone();
+                    break;
+                case 2:
+                    Console.Clear();
+                    Reflecting reflecting = new Reflecting("Reflecting", 0);
+                    reflecting.GetActivityName();
+                    reflecting.GetActivityDescription();
+                    seconds = reflecting.GetActivityTime();
+                    reflecting.GetReady();
+                    reflecting.DisplayPrompt(seconds);
+                    reflecting.GetDone();
+                    break;
+                case 3:
+                    Console.Clear();
+                    Listing listing = new Listing("Listing", 0);
+                    listing.GetActivityName();
+                    listing.GetActivityDescription();
+                    seconds = listing.GetActivityTime();
+                    listing.GetReady();
+                    listing.ReturnPrompt(seconds);
+                    listing.GetDone();
+                    break;
+                case 4:
+                    Console.WriteLine("Thank you for using the Mindfulness Program!");
+                    break;
+                default:
+                    Console.WriteLine($"Sorry the option you entered is not valid.");
+                    break;
             }
 
         }
 
     }
 
-    static void DisplayMenu()
-    {
-        Console.WriteLine("1. Start breathing activity");
-        Console.WriteLine("2. Start reflecting activity");
-        Console.WriteLine("3. Start listing activity");
-        Console.WriteLine("4. Quit");
-        
-    }
 }
