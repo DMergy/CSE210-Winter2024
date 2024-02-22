@@ -17,7 +17,7 @@ public abstract class Goal
     
     }
 
-    public string GetType()
+    public string GetHype()
     {
         return _type;
     }
@@ -43,15 +43,3 @@ public abstract class Goal
     public abstract void RecordGoalEvent(List<Goal> goals);
 
 }
-
-
-// _shortName:string
-// _description:string
-// _points:string
-
-//Goal(name, description, points)
-
-// RecordEvent():void
-// IsComplete():bool
-// GetDetailsString():string
-// GetStringRepresentation():string

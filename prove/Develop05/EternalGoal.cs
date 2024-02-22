@@ -36,11 +36,3 @@ public class EternalGoal : Goal
     }
     
 }
-
-
-
-// EternalGoal(name, description, points)
-
-// RecordEvent():void
-// IsComplete():bool
-// GetStringRepresentation():string
