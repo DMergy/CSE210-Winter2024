@@ -1,0 +1,2 @@
+50
+Simple Goal:; Wash Car; Visit Car Wash; 50; False

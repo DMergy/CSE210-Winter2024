@@ -1,0 +1,5 @@
+15
+Check List Goal:; Test; This Is Only A Test; 5; False; 3; 50; 1
+Check List Goal:; Eat Healthier; Vegetable Snacks; 10; False; 4; 100; 2
+Simple Goal:; Exercise; Walk Daily; 10; False
+Simple Goal:; Wash Car; Visit Car Wash; 50; False
