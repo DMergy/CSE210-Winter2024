@@ -109,10 +109,6 @@ public class GoalManager
                 int points = int.Parse(entries[3]);
                 bool status = Convert.ToBoolean(entries[4]);
 
-                int numberTimes = int.Parse(entries[5]);
-                int bonusPoints = int.Parse(entries[6]);
-                int counter = int.Parse(entries[7]);
-
                 if (entries[0] == "Simple Goal:")
                 {
                     SimpleGoal sGoal = new SimpleGoal(type, name, description, points, status);
@@ -125,6 +121,9 @@ public class GoalManager
                 }
                 if (entries[0] == "Check List Goal:")
                 {
+                    int numberTimes = int.Parse(entries[5]);
+                    int bonusPoints = int.Parse(entries[6]);
+                    int counter = int.Parse(entries[7]);
                     ChecklistGoal clGoal = new ChecklistGoal(type, name, description, points, status, numberTimes, bonusPoints, counter);
                     AddGoal(clGoal);
                 }
