@@ -8,7 +8,7 @@ public class ChecklistGoal : Goal
     private bool _status;
     private int _count;
 
-    public ChecklistGoal(string type, string name, string description, int points, int numberTimes, int bonusPoints) : base(type, name, description, points)
+    public ChecklistGoal(string type, string name, string description, int points, bool status, int numberTimes, int bonusPoints, int count) : base(type, name, description, points)
     {
         _status = false;
         _numberTimes = numberTimes;
