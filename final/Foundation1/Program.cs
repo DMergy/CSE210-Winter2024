@@ -8,7 +8,7 @@ class Program
         List<Videos> videosList = new List<Videos>();
     
 
-    Videos video1 = new Videos("Mark Ruffalo Suffers For His Art While Eating Spicy Wings", "Hot Ones", 975);
+    Videos video1 = new Videos("Mark Ruffalo Suffers For His Art While Eating Spicy Wings", "Hot Ones", 800);
 
     Comments video1Comment1 = new Comments("Jamie", "Something I love about Hot Ones is hearing the crew laugh from behind the scenes, makes the whole thing feel more genuine.");
     Comments video1Comment2 = new Comments("Pilot", "This is genuinely one of the best episodes. You can tell Mark Ruffalo WANTS to be there, and those are the episodes I end up loving.");
@@ -20,7 +20,7 @@ class Program
 
     videosList.Add(video1);
 
-    Videos video2 = new Videos("His secret beach house is inside a box truck!?", "Tiny House Giant Journey", 975);
+    Videos video2 = new Videos("His secret beach house is inside a box truck!?", "Tiny House Giant Journey", 800);
 
     Comments video2Comment1 = new Comments("Vic", "OMG! This is the best designed rig I've seen in YEARS. Kudos to you, Sir.");
     Comments video2Comment2 = new Comments("Diva", "Dude is a renaissance man.  Excellent craftsmanship and he is a grandpa that surfs, how cool is that?  Kudos to this guy!");
@@ -32,7 +32,7 @@ class Program
 
     videosList.Add(video2);
 
-    Videos video3 = new Videos("Sonic vs. Wienerschnitzel Taste Test, FOOD FEUDS", "Good Mythical Morning", 975);
+    Videos video3 = new Videos("Sonic vs. Wienerschnitzel Taste Test, FOOD FEUDS", "Good Mythical Morning", 800);
 
     Comments video3Comment1 = new Comments("Sultan", "Ah, yet another moment for the Rhett and Link being best friends for 10mins compilations.");
     Comments video3Comment2 = new Comments("Nova", "We need to have a triple header of the Costco food court vs the Sam's Club food court vs the BJ's food court.");
