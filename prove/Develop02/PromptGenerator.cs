@@ -1,15 +1,38 @@
-class PromptGenerator
+using System;
+
+public class PromptGenerator
 {
-    public List<string> _prompts;
-
-    public string GetRandomPrompt()
+    public static string[] _prompt =
     {
-        return "Sample prompt";
-    }
-}
+        "What was the best moment of your day and why? ",
+        "Who did you share a special moment with today? ",
+        "What was your something new that you learned today? ",
+        "Who made you feel special or made you smile today?" ,
+        "What do you most wish for tomorrow? ",
+        "Did you receive any unexpected blessings today that you attribute to your faith? ",
+    };
+    public List<string> _journalPrompt = new List<string>(_prompt);
 
-//Console.WriteLine("1. Who made you smile today and how?");
-//Console.WriteLine("1. Who did you make smile today and how?");
-//Console.WriteLine("1. Where did you see the hand of God today?");
-//Console.WriteLine("1. How did you serve another today?");
-//Console.WriteLine("1. What scripture did you read that impacted your day?");
+    public PromptGenerator()
+    {
+
+    }
+
+    public void Display()
+    {
+        var random = new Random();
+        int index = random.Next(_journalPrompt.Count);
+        string journalPrompt = _journalPrompt[index];
+        Console.WriteLine($"\n{_journalPrompt}");
+    }
+
+    public string GetPrompt()
+    {
+        var random = new Random();
+        int index = random.Next(_journalPrompt.Count);
+        string journalPrompt = _journalPrompt[index];
+
+        return journalPrompt;
+    }
+
+}
